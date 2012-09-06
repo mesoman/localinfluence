@@ -10,11 +10,15 @@ package
 	import flash.display.Sprite;
 	import flash.events.Event;
 	import flash.geom.Rectangle;
+	import flash.text.TextField;
+	import li.ui.Button;
+	import li.ui.CustomButton;
 	
 	/**
 	 * ...
 	 * @author Meso Man
 	 */
+	[SWF(width = "1280", height = "720", backgroundColor = "#ffffff")]
 	public class Main extends Sprite 
 	{
 		
@@ -28,43 +32,34 @@ package
 		{
 			removeEventListener(Event.ADDED_TO_STAGE, init);
 
-			var minconfig: MinConfigTest = new MinConfigTest(stage);
-			addChild(minconfig);
-			/*var baseUI:BaseUI = new BaseUI(stage);
-			var mySprite:Sprite = new Sprite();
-			var element:ElementUI = baseUI.add(mySprite);
-			element.rect = new Rectangle( -50, -50, 100, 100);
-			element.refresh();
-			addChild(mySprite);
+			//var butn:Button = new Button();
+			//
+			//trace("width from main: " + butn.width);
+			//butn.height = 20;
+			//butn.gWidth = 100;
+			//butn.gHeight = 20;
+			//butn.draw();
+			//
+			//
+			//addChild(butn);
+			/*var startingY:int = 0;
+			for (var i:int = 0; i < 3; i++) 
+			{
+				var butn:CustomButton = new CustomButton("Replace", 150, 40, 0);
+				butn.x = 0;
+				butn.y = startingY;
+				startingY += 50;
+				addChild(butn);
+			}*/
 			
-			var layout:LayoutUI = new LayoutUI(stage, 400, 300);
-			layout.backgroundColor = 0xFF0000;
-			layout.backgroundAlpha = 0.2;
-			layout.bottom = 10;
-			layout.right = 10;
-			layout.refresh();
-			addChild(layout);*/
+			var butn:CustomButton = new CustomButton("Import Background", 200, 50, 0);
+			butn.x = stage.stageWidth / 2 - butn.width / 2;
+			butn.y = stage.stageHeight / 2 - butn.height / 2;
+			addChild(butn);
 			
-			/*var mySprite:Sprite = new Sprite();
-			var baseUI:BaseUI = new BaseUI(stage);
-			var vbox:VBoxUI = new VBoxUI(stage, 400, 300);
-			vbox.backgroundColor = 0xFF0000;
-			vbox.backgroundAlpha = 0.2;
-			vbox.ratio = ElementUI.RATIO_IN;
-			vbox.childrenGap = new GapUI(5, 5);
-			vbox.childrenPadding = new PaddingUI(5, 5, 5, 5);
-			vbox.childrenAlign = VBoxUI.ALIGN_BOTTOM_RIGHT;
-			addChild(vbox);
-			 
-			for (var i:int=0; i<8; ++i) {
-			var sprite:Sprite = new Sprite();
-			sprite.graphics.beginFill(0xFF0000, .5);
-			sprite.graphics.drawRect(0, 0, 100, 100);
-			vbox.addChild(sprite);
-			}
-			 
-			vbox.refresh();*/
-			// entry point
+			
+			
+			
 		}
 		
 	}
